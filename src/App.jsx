@@ -5,6 +5,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Tracker from './pages/Tracker'
+import UpdateToast from './components/UpdateToast'
 
 export default function App() {
   return (
@@ -29,6 +30,8 @@ export default function App() {
           <Route path="/" element={<Navigate to="/tracker" replace />} />
           <Route path="*" element={<Navigate to="/tracker" replace />} />
         </Routes>
+        {/* Global PWA Service Worker Update & Offline Ready Toast */}
+        <UpdateToast />
       </AuthProvider>
     </BrowserRouter>
   )
