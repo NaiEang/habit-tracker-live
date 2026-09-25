@@ -213,6 +213,10 @@ export default function AvatarUpload({ user }) {
             <img
               src={currentDisplayImage}
               alt="User Avatar"
+              loading="lazy"
+              width="58"
+              height="58"
+              decoding="async"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           ) : (
